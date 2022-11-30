@@ -6,9 +6,10 @@ import { TransactionSchema } from './schema/transaction.models';
 
 @Module({
   imports: [
-    // MongooseModule.forRoot('mongodb://localhost/payment'),
+    // MongooseModule.forRoot('mongodb://localhost/payment')
+    //mongodb+srv://user:root@payment-apps.bjtple4.mongodb.net/?retryWrites=true&w=majority,
     MongooseModule.forRoot(
-      'mongodb+srv://user:root@payment-apps.bjtple4.mongodb.net/?retryWrites=true&w=majority',
+      'mongodb://mongo:CqO0G3EvtymyMh4BMRv0@containers-us-west-116.railway.app:7684',
     ),
     MongooseModule.forFeature([
       {
