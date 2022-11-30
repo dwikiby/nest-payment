@@ -20,7 +20,7 @@ export class Transaction {
   @Prop({ default: 'MYR' })
   currency: string;
 
-  @Prop({ default: Date.now })
+  @Prop({ default: Date() })
   date_added: Date;
 }
 
