@@ -10,6 +10,12 @@ export class WalletService {
     @InjectModel('Wallet') private readonly walletModel: Model<WalletDocument>,
   ) {}
 
+  async readWallet() {
+    return this.walletModel.find({}).then((wallet) => {
+      return wallet;
+    });
+  }
+
   // wallet detail
   _getWalletDetail(wallet: WalletDocument): WalletDetail {
     return {

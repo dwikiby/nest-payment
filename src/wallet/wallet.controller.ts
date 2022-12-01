@@ -25,11 +25,18 @@ export class WalletController {
     return this.walletService.createWallet(walletDto);
   }
 
-  //get data by user id
+  //get data by wallet id
   @UseGuards(JwtGuards)
   @Get(':id')
   getWallet(@Param('id') id: string): Promise<WalletDetail | null> {
     return this.walletService.findById(id);
+  }
+
+  // get all wallet data
+  @UseGuards(JwtGuards)
+  @Get()
+  readWallet() {
+    return this.walletService.readWallet();
   }
   // update wallet
   @UseGuards(JwtGuards)
