@@ -21,13 +21,11 @@ export class TransactionController {
   constructor(private readonly transactionService: TransactionService) {}
 
   // create data transaction
-  @UseGuards(JwtGuards)
   @Post()
   async createTransaction(@Body() transactionDto: Transaction) {
     return this.transactionService.createTransaction(transactionDto);
   }
   // get data
-  @UseGuards(JwtGuards)
   @Get()
   readTransaction() {
     return this.transactionService.readTransaction();
