@@ -9,7 +9,7 @@ import { TransactionSchema } from './schema/transaction.models';
     // MongooseModule.forRoot('mongodb://localhost/payment')
     //mongodb+srv://user:root@payment-apps.bjtple4.mongodb.net/?retryWrites=true&w=majority,
     MongooseModule.forRoot(
-      'mongodb://mongo:CqO0G3EvtymyMh4BMRv0@containers-us-west-116.railway.app:7684',
+      'mongodb://mongo:v4qkOemQ3KNJ9qZIb59U@containers-us-west-75.railway.app:7861',
     ),
     MongooseModule.forFeature([
       {
