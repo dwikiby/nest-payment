@@ -31,7 +31,6 @@ export class TransactionController {
     return this.transactionService.readTransaction();
   }
   // update data
-  @UseGuards(JwtGuards)
   @Patch(':id')
   async updateTransaction(
     @Param('id') id: string,
@@ -40,7 +39,7 @@ export class TransactionController {
     return this.transactionService.updateTransaction(id, updateData);
   }
   // delete data
-  @UseGuards(JwtGuards)
+  // @UseGuards(JwtGuards)
   @Delete(':id')
   async deleteTransaction(@Param('id') id: string) {
     return this.transactionService.deleteTransaction(id);
