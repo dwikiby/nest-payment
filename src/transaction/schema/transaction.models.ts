@@ -5,16 +5,16 @@ export type TransactionDocument = Transaction & Document;
 
 @Schema()
 export class Transaction {
-  @Prop()
+  @Prop({ required: true })
   merchantkey: string;
 
-  @Prop()
+  @Prop({ required: true })
   merchantcode: string;
 
-  @Prop()
+  @Prop({ required: true })
   transid: string;
 
-  @Prop()
+  @Prop({ required: true })
   amount: string;
 
   @Prop({ default: 'MYR' })
